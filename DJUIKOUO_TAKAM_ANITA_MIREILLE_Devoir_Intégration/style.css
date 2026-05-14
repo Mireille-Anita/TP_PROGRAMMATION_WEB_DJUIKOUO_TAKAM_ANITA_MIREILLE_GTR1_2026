@@ -1,0 +1,308 @@
+/* Reset & Styles Généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Flexbox pour la Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #020817;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.btn-search {
+    padding: 8px 20px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hero Section avec Flexbox */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 5%;
+    background-color: #1a1a1a;
+    color: white;
+    min-height: 500px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 15px 0;
+}
+
+.hero-content span {
+    color: #4facfe;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-primary {
+    padding: 12px 25px;
+    background: #4facfe;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    padding: 12px 25px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.ia-icon {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, #4facfe 0%, #00f2fe 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: bold;
+    box-shadow: 0 0 50px rgba(79, 172, 254, 0.5);
+}
+
+.imgcarte{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+/* Section Domaines */
+.domains {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.domain-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    flex: 1 1 300px; /* S'adapte à la largeur, minimum 300px */
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.carte{
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Section Articles */
+.latest-articles {
+    padding: 60px 5%;
+    background-color: #fff;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.view-all {
+    text-decoration: none;
+    color: #4facfe;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.articles-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.article-card {
+    display: flex; /* Flexbox pour l'alignement image/texte */
+    gap: 20px;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.article-card:hover {
+    background: #f9f9f9;
+}
+
+.article-img img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.article-body {
+    flex: 1;
+}
+
+.article-body .date {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.article-body h4 {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: #222;
+}
+
+.article-body p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* --- Adaptabilité pour la dernière partie --- */
+
+@media (max-width: 600px) {
+    .article-card {
+        flex-direction: column; /* L'image passe au dessus du texte sur mobile */
+        align-items: flex-start;
+    }
+
+    .article-img img {
+        width: 100%;
+        height: 180px;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+/* Footer */
+.footer {
+    background: #111;
+    color: #888;
+    padding: 40px 5%;
+    flex-direction: column;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.droits{
+    text-align: center;
+}
+/* --- RESPONSIVE DESIGN --- */
+
+/* Tablettes (max 992px) */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content {
+        margin-bottom: 50px;
+    }
+    
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .nav-links {
+        display: none; /* Masqué pour simplifier sur tablette/mobile (un menu burger serait idéal ici) */
+    }
+}
+
+/* Mobiles (max 600px) */
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .domain-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.appli{
+    width: 15px;
+    height: 15px;
+}
